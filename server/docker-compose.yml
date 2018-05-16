@@ -1,0 +1,23 @@
+version: '3.1'
+
+services:
+  db:
+    image: mongo
+    volumes:
+      - mongo-data:/data/db
+  api:
+    build: ./
+    env_file: .env
+    depends_on:
+      - db
+    links:
+      - db:db
+    volumes:
+      - node_modules:/node_modules
+    ports:
+      - "${PORT}:${PORT}"
+
+volumes:
+
+  mongo-data: {}
+  node_modules: {}

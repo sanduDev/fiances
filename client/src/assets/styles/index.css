@@ -1,0 +1,14 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  color: rgb(49, 49, 49);
+  line-height: 1;
+  background-color: #f8fafb;
+}
+
+ul.transactions > li:not(:last-child) {
+  border-bottom: 1px solid #cecece;
+}
